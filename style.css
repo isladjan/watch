@@ -5,6 +5,8 @@
 
 .wrapper {
     font-family: Tahoma, sans-serif;
+    background-color: black;
+    color: rgb(177, 177, 177);
 }
 
 h1 {
@@ -20,4 +22,8 @@ h1 {
     font-size: 0.9rem;
     display: flex;
     justify-content: center;
+}
+
+.word {
+    font-size: 1.2rem;
 }
