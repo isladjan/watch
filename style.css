@@ -17,19 +17,22 @@
     justify-content: center;
 } */
 
-/* .info {
-    margin-top: 16px;
+.info {
+    margin-top: 25px;
+    padding: 15px;
     background-color: brown;
     color: #fff;
     font-size: 0.9rem;
     display: flex;
     justify-content: center;
-} */
+}
 
 .panel {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 100vw;
+    height: 100vh;
 }
 
 .panel .word {
