@@ -43,7 +43,7 @@ html {
 .verb .serial-number {
     position: absolute;
     top:52px;
-    left: 62px;
+    left: 50%;
     font-size: 22px;
 }
 
