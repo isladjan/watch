@@ -12,10 +12,65 @@
 
     //dbInit();
 
+    controlsInit()
+
  
 
 
     /*  ````````````````````````````````  */
+
+    //MARK: -controlsInit
+    function controlsInit() {
+
+
+        //get element with last order Number
+        let orderList = [];
+        let verbs = document.querySelectorAll(".verb");
+        verbs.forEach(verb => {
+            orderList.push(Number( verb.dataset.order))
+        });
+        let lastOrder = orderList[orderList.length -1]
+ 
+
+
+
+        document.querySelectorAll(".controls").forEach(el => {
+
+            el.addEventListener("touchstart",  (e) => {
+                let currentEl = document.querySelector(".activ");
+                
+                
+
+                //up
+                if(e.target.classList.contains('up')) {
+                    let nextEl = document.querySelector(`[data-order="${Number(currentEl.dataset.order)-1}"]`);
+                    if(!nextEl) nextEl = document.querySelector(`[data-order="${lastOrder}"]`);
+
+                    nextEl.classList.add("activ");
+                    currentEl.classList.remove("activ")
+                    console.log(nextEl);
+       
+
+
+
+
+
+                //down
+                }else {
+                    let nextEl = document.querySelector(`[data-order="${Number(currentEl.dataset.order)+1}"]`);
+                    if(!nextEl) nextEl = document.querySelector(`[data-order="1"]`);
+
+                    nextEl.classList.add("activ");
+                    currentEl.classList.remove("activ")
+                    console.log(nextEl);
+
+                    //document.querySelector(".dsd").scrollIntoView();
+                }
+            })
+        })
+       
+
+    }
 
     //MARK: -dbInit
     function dbInit() {
