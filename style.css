@@ -23,7 +23,7 @@ html {
     width: 100%;
     height: 50vh;
     overflow: hidden;
-    outline:1px solid gray
+    aoutline:1px solid gray
 }
 .down {
     top:50vh;

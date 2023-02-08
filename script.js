@@ -36,7 +36,7 @@
 
         document.querySelectorAll(".controls").forEach(el => {
 
-            el.addEventListener("touchstart",  (e) => {
+            el.addEventListener("click",  (e) => {
                 let currentEl = document.querySelector(".activ");
                 
                 
@@ -48,11 +48,8 @@
 
                     nextEl.classList.add("activ");
                     currentEl.classList.remove("activ")
-                    console.log(nextEl);
+                    //console.log(nextEl);
        
-
-
-
 
 
                 //down
@@ -62,9 +59,8 @@
 
                     nextEl.classList.add("activ");
                     currentEl.classList.remove("activ")
-                    console.log(nextEl);
+                    //console.log(nextEl);
 
-                    //document.querySelector(".dsd").scrollIntoView();
                 }
             })
         })
