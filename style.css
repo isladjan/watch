@@ -23,14 +23,11 @@ html {
     width: 100%;
     height: 50vh;
     overflow: hidden;
-    aoutline:1px solid gray
 }
+
 .down {
     top:50vh;
 }
- 
-
-
 
 .verb {
     display: none;
@@ -57,16 +54,26 @@ html {
 .verb .word {
     font-size: 50px;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 40px;
     color: rgb(211, 211, 211);
 }
+
+.verb .sich { 
+    position: absolute;
+    z-index: 8;
+    top: 75px;
+    left:45%;
+    font-size: 32px;
+    color: rgb(211, 211, 211);
+}
+
 
 .verb .translate,
 .verb .perfekt,
 .verb .present {
     font-size: 35px;
     text-align: right;
-    margin: 20px 50px 0 0;
+    margin: 20px 70px 0 0;
 }
 
 .verb .perfekt {
