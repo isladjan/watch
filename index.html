@@ -14,107 +14,50 @@
         <!-- <h1>personal website for samsung watch for learning new words in German</h1> -->
         <!-- <div class="info"></div> -->
 
-        <div class="controls up"></div>
-        <div class="controls down"></div>
+        <div class="controls back"></div>
 
-
-
-
-
-
-        <ul class="main-menu">
-
-
-            <!-- MARK: -verb-menu-->
-            <li class="verb-menu main-item">
-                <span class="title">VERB</span>
-                <ul class="submenu-container">
-                    <li class="submenu verb-submenu">
-                        <span class="title">Basic 1</span>
-                    </li>
-                    <li class="submenu verb-submenu">
-                        <span class="title">Basic 2</span>
-                    </li>
-                    <li class="submenu verb-submenu">
-                        <span class="title">Basic 3</span>
-                    </li>
-                </ul>
-
-            </li>
-
-
-            <!-- MARK: -perfekt-menu-->
-            <li class="perfekt-menu main-item">
-                <span class="title">PERFEKAT</span>
-                <ul class="submenu-container">
-                    <li class="submenu perfekt-submenu">
-                        <span class="title">Basic 1</span>
-                    </li>
-                    <li class="submenu perfekt-submenu">
-                        <span class="title">Basic 2</span>
-                    </li>
-                    <li class="submenu perfekt-submenu">
-                        <span class="title">Basic 3</span>
-                    </li>
-                </ul>
-            </li>
-
-
-            <!-- MARK: -nomen-menu-->
-            <li class="nomen-menu  main-item">
-                <span class="title">NOMEN</span>
-                <ul class="submenu-container">
-                    <li class="submenu nomen-submenu">
-                        <span class="title">Basic 1</span>
-                    </li>
-                    <li class="submenu nomen-submenu">
-                        <span class="title">Basic 2</span>
-                    </li>
-                    <li class="submenu nomen-submenu">
-                        <span class="title">Basic 3</span>
-                    </li>
-                </ul>
-            </li>
-
-
-            <!-- MARK: -adjektive-menu-->
-            <li class="adjektive-menu  main-item">
-                <span class="title">ADJEKTIVE</span>
-                <ul class="submenu-container">
-                    <li class="submenu adjktive-submenu">
-                        <span class="title">Basic 1</span>
-                    </li>
-                    <li class="submenu adjktive-submenu">
-                        <span class="title">Basic 2</span>
-                    </li>
-                    <li class="submenu adjktive-submenu">
-                        <span class="title">Basic 3</span>
-                    </li>
-                </ul>
-            </li>
-
-
-            <!-- MARK: -misc-menu-->
-            <li class="misc-menu  main-item">
-                <span class="title">MISC</span>
-                <ul class="submenu-container">
-                    <li class="submenu misc-submenu">
-                        <span class="title">Basic 1</span>
-                    </li>
-                    <li class="submenu misc-submenu">
-                        <span class="title">Basic 2</span>
-                    </li>
-                    <li class="submenu misc-submenu">
-                        <span class="title">Basic 3</span>
-                    </li>
-                </ul>
-            </li>
-
+        <!-- MARK: -main-menu-->
+        <ul class="main-menu activ">
+            <li data-name="verb-submenu">VERB</li>
+            <li data-name="perfekat-submenu">PERFEKAT</li>
+            <li data-name="nomen-submenu">NOMEN</li>
+            <li data-name="adjective-submenu">ADJEKTIVE</li>
+            <li data-name="misc-submenu">MISC</li>
         </ul><!-- end of main-menu -->
 
 
 
 
+        <!-- MARK: -sub-menu-->
+        <ul class="submenu verb-submenu">
+            <li data-subname="verb1">Verb Basic 1</li>
+            <li data-subname="verb1">Verb Basic 2</li>
+            <li data-subname="verb1">Verb Basic 3</li>
+        </ul>
+
+        <ul class="submenu perfekat-submenu">
+            <li data-subname="perfekat1">Perfekat 1</li>
+            <li data-subname="perfekat2">Perfekat 2</li>
+            <li data-subname="perfekat3">Perfekat 3</li>
+        </ul>
+
+        <ul class="submenu nomen-submenu">
+            <li data-subname="nomen1">Nomen Basic 1</li>
+            <li data-subname="nomen2">Nomen Basic 2</li>
+            <li data-subname="nomen3">Nomen Basic 3</li>
+        </ul>
+
+        <ul class="submenu adjective-submenu">
+            <li data-subname="adjective1">Adjective Basic 1</li>
+            <li data-subname="adjective2">Adjective Basic 2</li>
+            <li data-subname="adjective3">Adjective Basic 3</li>
+        </ul>
+
+        <ul class="submenu misc-submenu">
+            <li data-subname="misc1">Misc Basic 1</li>
+            <li data-subname="misc2">Misc Basic 2</li>
+            <li data-subname="misc3">Misc Basic 3</li>
+        </ul>
 
 
 
@@ -122,124 +65,252 @@
 
 
 
+        <div class="content">
+            <div class="controls up"></div>
+            <div class="controls down"></div>
+            
 
-        <div class="verb-container">
+            <!-- MARK: -Perfekat1 -->
+            <div class="panel-group perfekat1">
 
-            <div class="verb" data-order="1">
-                <div class="serial-number">1</div>
-                <span class="word">schwellen</span>
-                <span class="translate">ćutati</span>
-                <span class="perfekt">h geschwiegen</span>
-                <span class="present">*schwillst</span>
-            </div>
+                <div class="panel" data-order="1">
+                    <div class="serial-number">1</div>
+                    <span class="word">schwellen</span>
+                    <span class="translate">ćutati</span>
+                    <span class="perfekt">h geschwiegen</span>
+                    <span class="present">*schwillst</span>
+                </div>
 
-            <div class="verb dsd" data-order="2">
-                <div class="serial-number">2</div>
-                <span class="word">ziehen</span>
-                <span class="translate">povuci, cimnuti</span>
-                <span class="perfekt">h gezogen</span>
-                <span class="present">ziehst</span>
-            </div>
+                <div class="panel" data-order="2">
+                    <div class="serial-number">2</div>
+                    <span class="word">ziehen</span>
+                    <span class="translate">povuci, cimnuti</span>
+                    <span class="perfekt">h gezogen</span>
+                    <span class="present">ziehst</span>
+                </div>
 
-            <div class="verb" data-order="3">
-                <div class="serial-number">3</div>
-                <span class="word">verzeihen</span>
-                <span class="translate">oprostiti</span>
-                <span class="perfekt">h verziehen</span>
-                <span class="present">verzeihst</span>
-            </div>
+                <div class="panel" data-order="3">
+                    <div class="serial-number">3</div>
+                    <span class="word">verzeihen</span>
+                    <span class="translate">oprostiti</span>
+                    <span class="perfekt">h verziehen</span>
+                    <span class="present">verzeihst</span>
+                </div>
 
-            <div class="verb" data-order="4">
-                <div class="serial-number">4</div>
-                <span class="sich">sich</span>
-                <span class="word">erschrecken</span>
-                <span class="translate">uplasiti se</span>
-                <span class="perfekt">s erschrocken</span>
-                <span class="present">*erschrickst</span>
-            </div>
+                <div class="panel" data-order="4">
+                    <div class="serial-number">4</div>
+                    <span class="sich">sich</span>
+                    <span class="word">erschrecken</span>
+                    <span class="translate">uplasiti se</span>
+                    <span class="perfekt">s erschrocken</span>
+                    <span class="present">*erschrickst</span>
+                </div>
 
-            <div class="verb" data-order="4">
-                <div class="serial-number">4</div>
-                <span class="word">verschieben</span>
-                <span class="translate">pomeriti Termin</span>
-                <span class="perfekt">h verschoben</span>
-                <span class="present"></span>
-            </div>
+                <div class="panel" data-order="4">
+                    <div class="serial-number">4</div>
+                    <span class="word">verschieben</span>
+                    <span class="translate">pomeriti Termin</span>
+                    <span class="perfekt">h verschoben</span>
+                    <span class="present"></span>
+                </div>
 
-            <div class="verb" data-order="5">
-                <div class="serial-number">5</div>
-                <span class="word">stehlen</span>
-                <span class="translate">krasti</span>
-                <span class="perfekt">h gestohlen</span>
-                <span class="present">*stiehlst</span>
-            </div>
+                <div class="panel" data-order="5">
+                    <div class="serial-number">5</div>
+                    <span class="word">stehlen</span>
+                    <span class="translate">krasti</span>
+                    <span class="perfekt">h gestohlen</span>
+                    <span class="present">*stiehlst</span>
+                </div>
 
-            <div class="verb" data-order="6">
-                <div class="serial-number">6</div>
-                <span class="word">stinken</span>
-                <span class="translate">smrdeti</span>
-                <span class="perfekt">h gestunken</span>
-                <span class="present">stinkst</span>
-            </div>
+                <div class="panel" data-order="6">
+                    <div class="serial-number">6</div>
+                    <span class="word">stinken</span>
+                    <span class="translate">smrdeti</span>
+                    <span class="perfekt">h gestunken</span>
+                    <span class="present">stinkst</span>
+                </div>
 
-            <div class="verb" data-order="7">
-                <div class="serial-number">7</div>
-                <span class="word">laden</span>
-                <span class="translate">pozvati</span>
-                <span class="perfekt">h geladen</span>
-                <span class="present">*lädst - lädt</span>
-            </div>
+                <div class="panel" data-order="7">
+                    <div class="serial-number">7</div>
+                    <span class="word">laden</span>
+                    <span class="translate">pozvati</span>
+                    <span class="perfekt">h geladen</span>
+                    <span class="present">*lädst - lädt</span>
+                </div>
 
-            <div class="verb" data-order="8">
-                <div class="serial-number">8</div>
-                <span class="word">riechen</span>
-                <span class="translate">mirisati</span>
-                <span class="perfekt">h gerochen</span>
-                <span class="present">riechst</span>
-            </div>
+                <div class="panel" data-order="8">
+                    <div class="serial-number">8</div>
+                    <span class="word">riechen</span>
+                    <span class="translate">mirisati</span>
+                    <span class="perfekt">h gerochen</span>
+                    <span class="present">riechst</span>
+                </div>
 
-            <div class="verb" data-order="9">
-                <div class="serial-number">9</div>
-                <span class="word">schreien</span>
-                <span class="translate">vikati</span>
-                <span class="perfekt">h geschrien</span>
-                <span class="present"> </span>
-            </div>
+                <div class="panel" data-order="9">
+                    <div class="serial-number">9</div>
+                    <span class="word">schreien</span>
+                    <span class="translate">vikati</span>
+                    <span class="perfekt">h geschrien</span>
+                    <span class="present"> </span>
+                </div>
 
-            <div class="verb" data-order="10">
-                <div class="serial-number">10</div>
-                <span class="word">bekommen</span>
-                <span class="translate">primiti</span>
-                <span class="perfekt">s bekomen</span>
-                <span class="present"> </span>
-            </div>
+                <div class="panel" data-order="10">
+                    <div class="serial-number">10</div>
+                    <span class="word">bekommen</span>
+                    <span class="translate">primiti</span>
+                    <span class="perfekt">s bekomen</span>
+                    <span class="present"> </span>
+                </div>
 
-            <div class="verb" data-order="11">
-                <div class="serial-number">11</div>
-                <span class="word">werden</span>
-                <span class="translate">postati</span>
-                <span class="perfekt">s geworden</span>
-                <span class="present">*wirst</span>
-            </div>
+                <div class="panel" data-order="11">
+                    <div class="serial-number">11</div>
+                    <span class="word">werden</span>
+                    <span class="translate">postati</span>
+                    <span class="perfekt">s geworden</span>
+                    <span class="present">*wirst</span>
+                </div>
 
-            <div class="verb" data-order="12">
-                <div class="serial-number">12</div>
-                <span class="word">umziehen</span>
-                <span class="translate">preseliti se</span>
-                <span class="perfekt">h umgezogen</span>
-                <span class="present"> </span>
-            </div>
+                <div class="panel" data-order="12">
+                    <div class="serial-number">12</div>
+                    <span class="word">umziehen</span>
+                    <span class="translate">preseliti se</span>
+                    <span class="perfekt">h umgezogen</span>
+                    <span class="present"> </span>
+                </div>
 
-            <div class="verb" data-order="13">
-                <div class="serial-number">13</div>
-                <span class="word">ziehen</span>
-                <span class="translate">povuci / cimnuti</span>
-                <span class="perfekt">h gezogen</span>
-                <span class="present">ziehst</span>
-            </div>
+                <div class="panel" data-order="13">
+                    <div class="serial-number">13</div>
+                    <span class="word">ziehen</span>
+                    <span class="translate">povuci / cimnuti</span>
+                    <span class="perfekt">h gezogen</span>
+                    <span class="present">ziehst</span>
+                </div>
 
-        </div><!-- end of verb-container   -->
-    </div>
+            </div><!-- end of verb-container   -->
+
+
+            <div class="panel-group nomen1">
+
+                <div class="panel" data-order="1">
+                    <div class="serial-number">1</div>
+                    <span class="word">schwellen</span>
+                    <span class="translate">ćutati</span>
+                    <span class="perfekt">h geschwiegen</span>
+                    <span class="present">*schwillst</span>
+                </div>
+
+                <div class="panel" data-order="2">
+                    <div class="serial-number">2</div>
+                    <span class="word">ziehen</span>
+                    <span class="translate">povuci, cimnuti</span>
+                    <span class="perfekt">h gezogen</span>
+                    <span class="present">ziehst</span>
+                </div>
+
+                <div class="panel" data-order="3">
+                    <div class="serial-number">3</div>
+                    <span class="word">verzeihen</span>
+                    <span class="translate">oprostiti</span>
+                    <span class="perfekt">h verziehen</span>
+                    <span class="present">verzeihst</span>
+                </div>
+
+                <div class="panel" data-order="4">
+                    <div class="serial-number">4</div>
+                    <span class="sich">sich</span>
+                    <span class="word">erschrecken</span>
+                    <span class="translate">uplasiti se</span>
+                    <span class="perfekt">s erschrocken</span>
+                    <span class="present">*erschrickst</span>
+                </div>
+
+                <div class="panel" data-order="4">
+                    <div class="serial-number">4</div>
+                    <span class="word">verschieben</span>
+                    <span class="translate">pomeriti Termin</span>
+                    <span class="perfekt">h verschoben</span>
+                    <span class="present"></span>
+                </div>
+
+                <div class="panel" data-order="5">
+                    <div class="serial-number">5</div>
+                    <span class="word">stehlen</span>
+                    <span class="translate">krasti</span>
+                    <span class="perfekt">h gestohlen</span>
+                    <span class="present">*stiehlst</span>
+                </div>
+
+                <div class="panel" data-order="6">
+                    <div class="serial-number">6</div>
+                    <span class="word">stinken</span>
+                    <span class="translate">smrdeti</span>
+                    <span class="perfekt">h gestunken</span>
+                    <span class="present">stinkst</span>
+                </div>
+
+                <div class="panel" data-order="7">
+                    <div class="serial-number">7</div>
+                    <span class="word">laden</span>
+                    <span class="translate">pozvati</span>
+                    <span class="perfekt">h geladen</span>
+                    <span class="present">*lädst - lädt</span>
+                </div>
+
+                <div class="panel" data-order="8">
+                    <div class="serial-number">8</div>
+                    <span class="word">riechen</span>
+                    <span class="translate">mirisati</span>
+                    <span class="perfekt">h gerochen</span>
+                    <span class="present">riechst</span>
+                </div>
+
+                <div class="panel" data-order="9">
+                    <div class="serial-number">9</div>
+                    <span class="word">schreien</span>
+                    <span class="translate">vikati</span>
+                    <span class="perfekt">h geschrien</span>
+                    <span class="present"> </span>
+                </div>
+
+                <div class="panel" data-order="10">
+                    <div class="serial-number">10</div>
+                    <span class="word">bekommen</span>
+                    <span class="translate">primiti</span>
+                    <span class="perfekt">s bekomen</span>
+                    <span class="present"> </span>
+                </div>
+
+                <div class="panel" data-order="11">
+                    <div class="serial-number">11</div>
+                    <span class="word">werden</span>
+                    <span class="translate">postati</span>
+                    <span class="perfekt">s geworden</span>
+                    <span class="present">*wirst</span>
+                </div>
+
+                <div class="panel" data-order="12">
+                    <div class="serial-number">12</div>
+                    <span class="word">umziehen</span>
+                    <span class="translate">preseliti se</span>
+                    <span class="perfekt">h umgezogen</span>
+                    <span class="present"> </span>
+                </div>
+
+                <div class="panel" data-order="13">
+                    <div class="serial-number">13</div>
+                    <span class="word">ziehen</span>
+                    <span class="translate">povuci / cimnuti</span>
+                    <span class="perfekt">h gezogen</span>
+                    <span class="present">ziehst</span>
+                </div>
+
+            </div><!-- end of verb-container   -->
+
+        </div><!-- end of content-->
+
+
+
+    </div><!-- end of wrapper   -->
 
     <script src="script.js"></script>
 </body>

@@ -8,167 +8,103 @@
 
 
 (() => {
-
-
-    //dbInit();
-
+    //when we click on the main menu
     mainmenu();
+
+    submenu();
 
     //up and down touch 
     controlsInit();
 
- 
 
 
     /*  ````````````````````````````````  */
 
-
+    //when we click on the main menu
+    //MARK: -mainmenu
     function mainmenu() {
         let menuEl = document.querySelectorAll(".main-menu > li");
         menuEl.forEach(el => {
             el.addEventListener("click", (e) => {
-                
-
-                document.querySelectorAll(".main-item > .title").forEach(el => {
-                    el.style.display = "none";
-                });
-
-
-                e.target.querySelector(".submenu-container").classList.add("activ");
-
-                console.log(e.target);
+                document.querySelector(".main-menu").classList.remove("activ")
+                document.querySelector(`.${e.target.dataset.name}`).classList.add("activ");
             })
         });
     }
 
 
 
+    //MARK: -submenu
+    function submenu() {
+        let submenuEl = document.querySelectorAll(".submenu > li");
+        let content = document.querySelector(".content");
+
+        submenuEl.forEach(el => {
+            el.addEventListener("click", (e) => {
+                e.target.parentElement.classList.remove("activ")
+                let cur = content.querySelector(`.${e.target.dataset.subname}`);
+                if (cur) {
+                    cur.classList.add("activ");
+                    cur.firstElementChild.classList.add("activ");
+                }
+            })
+        })
+    }
 
 
 
 
     //MARK: -controlsInit
     function controlsInit() {
-
-
-        //get element with last order Number
-        let orderList = [];
-        let verbs = document.querySelectorAll(".verb");
-        verbs.forEach(verb => {
-            orderList.push(Number( verb.dataset.order))
-        });
-        let lastOrder = orderList[orderList.length -1]
- 
-
-
-
         document.querySelectorAll(".controls").forEach(el => {
+            el.addEventListener("click", (e) => {
+                let activGroup = document.querySelector(".panel-group.activ");
+                if(!activGroup) { //if the subgroup does not exist - return to the main menu
+                    document.querySelector(".main-menu").classList.add("activ");
+                    console.log('RETURN');
+                    return;
+                }
+                let activPanel = activGroup.querySelector(".panel.activ");
+                let lastOrder;
 
-            el.addEventListener("click",  (e) => {
-                let currentEl = document.querySelector(".activ");
-                
-                
+                //get last index of panel in current section
+                let orderList = [];
+                document.querySelector(".panel-group.activ").querySelectorAll(".panel").forEach(el => {
+                    orderList.push(Number(el.dataset.order))
+                });
+                lastOrder = orderList[orderList.length - 1];
+
 
                 //up
-                if(e.target.classList.contains('up')) {
-                    let nextEl = document.querySelector(`[data-order="${Number(currentEl.dataset.order)-1}"]`);
-                    if(!nextEl) nextEl = document.querySelector(`[data-order="${lastOrder}"]`);
+                if (e.target.classList.contains('up')) {
+                    let nextEl = activGroup.querySelector(`[data-order="${Number(activPanel.dataset.order) - 1}"]`);
+                    if (!nextEl) nextEl = activGroup.querySelector(`[data-order="${lastOrder}"]`);
 
                     nextEl.classList.add("activ");
-                    currentEl.classList.remove("activ")
+                    activPanel.classList.remove("activ")
                     //console.log(nextEl);
-       
 
-
-                //down
-                }else {
-                    let nextEl = document.querySelector(`[data-order="${Number(currentEl.dataset.order)+1}"]`);
-                    if(!nextEl) nextEl = document.querySelector(`[data-order="1"]`);
+                    //down
+                } else if (e.target.classList.contains('down')) {
+                    let nextEl = activGroup.querySelector(`[data-order="${Number(activPanel.dataset.order) + 1}"]`);
+                    if (!nextEl) nextEl = activGroup.querySelector(`[data-order="1"]`);
 
                     nextEl.classList.add("activ");
-                    currentEl.classList.remove("activ")
+                    activPanel.classList.remove("activ")
                     //console.log(nextEl);
+                }
 
+
+                //back
+                else {
+                    activGroup.classList.remove("activ");
+                    activPanel.classList.remove("activ");
+                    document.querySelector(".main-menu").classList.add("activ")
                 }
             })
         })
-       
-
-    }
-
-    //MARK: -dbInit
-    function dbInit() {
-        const request = indexedDB.open('WATCH', 1);
 
 
-        request.onerror = (event) => {
-            console.error(`Database error: ${event.target.errorCode}`);
-        };
-
-        request.onsuccess = (event) => {
-            const db = event.target.result;
-            console.log(db);
-
-            insertContact(db, {
-                email: 'john.doe@outlook.com',
-                firstName: 'John',
-                lastName: 'Doe'
-            });
-       
-            insertContact(db, {
-                email: 'jane.doe@gmail.com',
-                firstName: 'Jane',
-                lastName: 'Doe'
-            });
-        };
-
-
-        // create the Contacts object store and indexes
-        request.onupgradeneeded = (event) => {
-            let db = event.target.result;
-
-            // create the Contacts object store 
-            // with auto-increment id
-            let store = db.createObjectStore('Contacts', {
-                autoIncrement: true
-            });
-
-            // create an index on the email property
-            let index = store.createIndex('email', 'email', {
-                unique: true
-            });
-        };
-
-
-    }
-
-
-
-
-    function insertContact(db, contact) {
-        // create a new transaction
-        const txn = db.transaction('Contacts', 'readwrite');
-    
-        // get the Contacts object store
-        const store = txn.objectStore('Contacts');
-        //
-        let query = store.put(contact);
-    
-        // handle success case
-        query.onsuccess = function (event) {
-            console.log(event);
-        };
-    
-        // handle the error case
-        query.onerror = function (event) {
-            console.log(event.target.errorCode);
-        }
-    
-        // close the database once the 
-        // transaction completes
-        txn.oncomplete = function () {
-            db.close();
-        };
     }
 
 
