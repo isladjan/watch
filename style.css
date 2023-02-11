@@ -43,23 +43,21 @@ html {
     display: flex;
 }
 
-.main-menu li {
+.main-menu li,
+.submenu li {
     width: 60vw;
     border:1px solid rgba(128, 128, 128, 0.13);
-    padding: 20px 0px;
+    padding: 17px 0px;
     text-align: center;
+    color: #fff;
+    font-size:22px;
 }
 
 .submenu.activ {
     display: flex;
 }
 
-.submenu li {
-    width: 60vw;
-    border:1px solid rgba(128, 128, 128, 0.13);
-    padding: 20px 0px;
-    text-align: center;
-}
+
 
 
 /* Controls */
@@ -86,7 +84,7 @@ html {
     width: 250px;
     height: 300px;
     border-radius: 100%;
-    outline:1px solid rgb(36, 11, 11);
+    outline:1px solid rgb(138, 28, 28);
     z-index: 10;
 }
 
@@ -123,7 +121,7 @@ html {
 
 .content .panel .serial-number {
     position: absolute;
-    top:42px;
+    top:52px;
     left: 50%;
     font-size: 22px;
     color: rgb(46, 46, 46);
