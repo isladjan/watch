@@ -12,12 +12,40 @@
 
     //dbInit();
 
-    controlsInit()
+    mainmenu();
+
+    //up and down touch 
+    controlsInit();
 
  
 
 
     /*  ````````````````````````````````  */
+
+
+    function mainmenu() {
+        let menuEl = document.querySelectorAll(".main-menu > li");
+        menuEl.forEach(el => {
+            el.addEventListener("click", (e) => {
+                
+
+                document.querySelectorAll(".main-item > .title").forEach(el => {
+                    el.style.display = "none";
+                });
+
+
+                e.target.querySelector(".submenu-container").classList.add("activ");
+
+                console.log(e.target);
+            })
+        });
+    }
+
+
+
+
+
+
 
     //MARK: -controlsInit
     function controlsInit() {

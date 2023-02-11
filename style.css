@@ -1,6 +1,11 @@
+/* General Styles */
 * {
     margin: 0;
     padding: 0;
+}
+
+ul {
+    list-style: none;
 }
 
 html {
@@ -8,22 +13,73 @@ html {
     scroll-snap-type: y mandatory;
 }
 
+
+/* Main */
 .wrapper {
     width: 100%;
+    min-height: 100vh;
     font-family: Tahoma, sans-serif;
     background-color: black;
     color: rgb(128, 128, 128);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .controls {
+    display: none;
     position: fixed;
-    z-index: 10;
+    z-index: 5;
     top:0;
     left:0;
     width: 100%;
     height: 50vh;
     overflow: hidden;
 }
+
+
+
+/*  Common */
+.title {
+    pointer-events: none;
+}
+
+
+/* Main-menu */
+.main-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-menu li {
+    width: 60vw;
+    border:1px solid rgba(128, 128, 128, 0.13);
+    padding: 20px 0px;
+    text-align: center;
+}
+
+
+
+/* Submenu */
+.submenu-container {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.submenu-container.active {
+    display: flex;
+}
+
+
+
+
+
+
+
+
 
 .down {
     top:50vh;
