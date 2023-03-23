@@ -8,6 +8,17 @@
 
 
 (() => {
+
+
+
+    //console.log(window.innerHeight);
+    //console.log(window.innerWidth);
+
+
+
+
+
+
     //when we click on the main menu
     mainmenu();
 
