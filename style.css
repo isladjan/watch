@@ -135,6 +135,15 @@ html {
     color: rgb(211, 211, 211);
 }
 
+
+.content .panel .recenica {
+    font-size: 40px;
+    text-align: center;
+    margin-top: 40px;
+    color: rgb(211, 211, 211);
+}
+
+
 .content .panel .sich,
 .content .panel .artikel  { 
     position: absolute;
