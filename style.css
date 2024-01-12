@@ -135,6 +135,13 @@ html {
     color: rgb(211, 211, 211);
 }
 
+.content .panel .word2 {
+    font-size: 40px;
+    text-align: center;
+    margin-top: 30px;
+    color: rgb(211, 211, 211);
+}
+
 
 .content .panel .recenica {
     font-size: 40px;
@@ -183,18 +190,18 @@ html {
     font-size: 25px;
 }
 
-.satze {
+.content .panel .satze {
     text-align: center;
     font-size: 35px;
     line-height: 1.5;
     padding: 0 65px;
 }
 
-.symbol {
-    font-size: 42px;
-    text-align: right;
+.content .panel .symbol {
+    font-size: 60px;
+    text-align: center;
     margin: 20px 70px 0 0;
-    color: rgb(0, 112, 15);
+    color: rgb(180, 13, 138);
 }
 
 /* .info {
