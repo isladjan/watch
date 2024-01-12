@@ -190,6 +190,13 @@ html {
     padding: 0 65px;
 }
 
+.symbol {
+    font-size: 42px;
+    text-align: right;
+    margin: 20px 70px 0 0;
+    color: rgb(0, 112, 15);
+}
+
 /* .info {
     margin-top: 25px;
     padding: 15px;
