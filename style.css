@@ -135,12 +135,7 @@ html {
     color: rgb(211, 211, 211);
 }
 
-.content .panel .word2 {
-    font-size: 40px;
-    text-align: center;
-    margin-top: 30px;
-    color: rgb(211, 211, 211);
-}
+
 
 
 .content .panel .recenica {
@@ -197,11 +192,36 @@ html {
     padding: 0 65px;
 }
 
+
 .content .panel .symbol {
-    font-size: 60px;
+    font-size: 80px;
     text-align: center;
-    margin: 20px 70px 0 0;
-    color: rgb(180, 13, 138);
+    margin: 40px auto  0 auto;
+    color: rgb(255, 138, 226);
+    border:1px solid rgba(255, 255, 255, 0.418);
+    border-radius: 12px;
+    padding: 5px 10px;
+}
+
+.content .panel .word2 {
+    font-size: 40px;
+    text-align: center;
+    margin-top: 30px;
+    color: rgb(211, 211, 211);
+}
+
+.content .panel .translate2  {
+    font-size: 40px;
+    text-align: center;
+    margin: 40px auto  0 auto;
+    color:bisque;
+}
+
+.content .panel .word2 {
+    font-size: 45px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: rgb(211, 211, 211);
 }
 
 /* .info {
